@@ -13,7 +13,10 @@ jobs:
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
-      - run: echo $MY_PASSWORD
+      - run:
+          name: "echo an env var that is part of our project"
+          command: |
+            echo $MY_PASSWORD
 
 
   print-hello:
